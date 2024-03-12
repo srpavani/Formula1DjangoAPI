@@ -15,7 +15,8 @@ class F1ResultView(ModelViewSet):
     
     def create(self, request):  
         try:  
-            request = requests.get("https://www.formula1.com/en/results.html/2023/races.html")
+            ano = request.data.get('ano', '')
+            request = requests.get(f"https://www.formula1.com/en/results.html/{ano}/races.html")
             scrap = BeautifulSoup(request.text, "html.parser")
 
             dados = scrap.find_all("tr")
