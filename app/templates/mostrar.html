@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da F1</title>
+</head>
+<body>
+    <h1>Resultados da F1</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>GrandPix</th>
+                <th>Data</th>
+                <th>Vencedor</th>
+                <th>Time</th>
+                <th>Voltas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resultado in corridas %}
+                <tr>
+                    <td>{{ resultado.GrandPix }}</td>
+                    <td>{{ resultado.data }}</td>
+                    <td>{{ resultado.vencedor }}</td>
+                    <td>{{ resultado.time }}</td>
+                    <td>{{ resultado.voltas }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

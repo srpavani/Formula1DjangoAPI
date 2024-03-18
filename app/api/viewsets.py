@@ -9,6 +9,7 @@ import json
 import requests
 
 
+
 class F1ResultView(ModelViewSet):
     queryset = F1ResultModels.objects.all()
     serializer_class = F1ResultSerializer
